@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Novedades | Postobón</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="logito.jpg" width="80" height="70" alt="Postobón" class="logo-img">
+        Postobón<span>.</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="materiales.html" class="active">Novedades</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="cart-icon" id="cartBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-products">
+    <div class="container">
+      <h1>Packs y <span>novedades</span></h1>
+      <p>Combos especiales y presentaciones familiares</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="materials-list"></div>
+  </section>
+
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Carrito <span id="cartItemsCount">(0)</span></h3>
+      <button class="close-cart" id="closeCart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total">
+      <p>Total: <strong id="cartTotal">$0</strong></p>
+      <button class="btn-checkout">Finalizar compra</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal" id="modalInvoice">
+    <div class="modal-content">
+      <h3>Resumen de tu pedido</h3>
+      <div id="invoiceDetails"></div>
+      <div class="modal-buttons">
+        <button class="btn-cancel" onclick="closeModal('modalInvoice')">Cancelar</button>
+        <button class="btn-continue" onclick="confirmPurchase()">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modalSuccess">
+    <div class="modal-content">
+      <h3>¡Tu pedido va en camino!</h3>
+      <p style="margin:1.5rem 0;color:#555">Gracias por elegir Postobón. Pronto recibirás tu pedido.</p>
+      <button class="btn-accept" onclick="closeModal('modalSuccess')">Aceptar</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo-footer">
+            <img src="logito.jpg" alt="Postobón">
+            Postobón
+          </div>
+          <p>El sabor que une a Colombia desde hace generaciones. Refrescante, auténtico y siempre contigo.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="materiales.html">Novedades</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter / X"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Postobón. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
